@@ -1,0 +1,55 @@
+<div id="landing-page">
+  <div class="content-page">
+    <div id="title-deskripsi">
+      <div class="text-content">
+        <span>
+          <h2 class="animate__animated animate__bounce">Hi There,</h2>
+          <h5 id="typeWriter"></h5>
+        </span>
+      </div>
+      <div id="about-deskripsi">
+        <span class="animate__animated animate__backInLeft">im a indonesian based Fullstack Developer focused on Backend developer, im passionate about building excellent software that improves the lives of those around me.</span>
+      </div>
+      <div id="download-cv">
+        <button class="btn btn-sm animate__animated animate__bounceInUp" id="btn-cv" type="submit">Download CV</button>
+      </div>
+    </div>
+    <img class="imgcontent animate__animated animate__slideInDown" src="../../MHub/component/assets/images/pp3.png" alt="" />
+  </div>
+  <div>
+    <div id="sosmed">
+      <div id="s-mobile">
+        <div class="icon-s animate__animated animate__bounceInLeft">
+          <img src="../../MHub/component/assets/icon/instagram.svg" alt="" />
+        </div>
+        <div class="icon-s animate__animated animate__bounceInLeft">
+          <img src="../../MHub/component/assets/icon/linkedin.svg" alt="" />
+        </div>
+        <div class="icon-s animate__animated animate__bounceInUp">
+          <img src="../../MHub/component/assets/icon/gitlab.svg" alt="" />
+        </div>
+        <div class="icon-s animate__animated animate__bounceInRight">
+          <img src="../../MHub/component/assets/icon/whatsapp.svg" alt="" />
+        </div>
+        <div class="icon-s animate__animated animate__bounceInRight">
+          <img src="../../MHub/component/assets/icon/envelope-regular.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  var i = 0;
+  var txt = "I'm Giri Gimnastiar"; /* isi dengan teks yang diinginkan */
+  var speed = 70; /* Kecepatan atau durasi efek dalam milidetik */
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("typeWriter").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  $(document).ready(function () {
+    typeWriter();
+  });
+</script>

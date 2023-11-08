@@ -1,0 +1,57 @@
+<div id="drawer-contact">
+  <div id="container-contact">
+    <div class="title-contact">
+      <h6>Contact Us</h6>
+    </div>
+    <div class="drawer-form">
+      <div class="alert alert-success alert-dismissible fade show d-none" style="font-size: 0.7rem;" role="alert">
+        <strong>Thank you</strong> message has been received.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <form name="mhub-contact-form">
+        <div class="mb-3">
+          <label for="email" class="form-label text-form">Email</label>
+          <input type="email" class="form-control text-form" id="email" placeholder="E-Mail" name="email"/>
+        </div>
+        <div class="mb-3">
+          <label for="subject" class="form-label text-form">Subject</label>
+          <input type="subject" class="form-control text-form" id="subject" placeholder="Subject" name="subject" />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label text-form">Message</label>
+          <textarea class="form-control text-form" style="font-size: 0.7rem;" id="message" rows="3" name="pesan"></textarea>
+        </div>
+        <div class="btn-submit">
+          <button type="submit" class="btn btn-sm btn-outline-light btn-kirim">Submit</button>
+          <button class="btn btn-sm btn-outline-light btn-loading d-none" type="button" disabled>
+            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            Loading...
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz_P7qpgenIPwTrdqWIZUc2ZhRaoqjXz5ARumQ4KPFLkM_VyQian43mEWT5BTlVLU8Z/exec'
+  const form = document.forms['mhub-contact-form']
+  const btnKirim = document.querySelector('.btn-kirim');
+  const btnLoading = document.querySelector('.btn-loading');
+  const alert = document.querySelector('.alert');
+
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    btnLoading.classList.toggle('d-none');
+    btnKirim.classList.toggle('d-none');
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => { 
+        btnLoading.classList.toggle('d-none');
+        btnKirim.classList.toggle('d-none');
+        console.log('Success!', response)
+        alert.classList.toggle('d-none')
+        form.reset();
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>

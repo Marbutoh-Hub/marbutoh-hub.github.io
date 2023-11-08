@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- CDN JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <!-- CSS Custom -->
+    <link href="./component/assets/css/styles.css" rel="stylesheet" />
+
+    <!-- CDN REMIX ICON -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+    <!-- CDN BOX ICON -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" />
+
+    <!-- CDN FONTAWESOME -->
+    <link rel="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    <!-- CDN GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,600&display=swap" rel="stylesheet" />
+
+    <!-- Animasi CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- NAVIGASI WEB AND TAB -->
+      <a class="logo mode-tablet-web" href="#">
+        <img src="./component/assets/images/logo-mhub2.png" alt="" width="50" height="50" class="d-inline-block align-text-top p-1" />
+        <span class="p-1">M-Hub</span>
+      </a>
+      <ul class="navbars mode-tablet-web">
+        <li><a id="home" href="index.html">Home</a></li>
+        <li><a id="profile" href="#">About</a></li>
+        <li><a id="project" href="#">Project</a></li>
+        <!-- <li><a id="services" href="#service-text">Services</a></li> -->
+        <li><a id="ebook" href="#services">E-book</a></li>
+        <li><a id="contact" href="#">Contact</a></li>
+      </ul>
+      <div class="main mode-tablet-web">
+        <a href="#" class="users"><i class="ri-user-fill"></i>Login</a>
+        <a href="#">Register</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+      </div>
+      <!-- END NAVIGASI WEB AND TAB -->
+    </header>
+    <!-- NAVIGASI MOBILE -->
+    <div class="m-navigasi" id="m-navigasi">
+      <div class="menuTooggle"></div>
+      <ul id="component-list">
+        <li id="homemobile" class="list">
+          <a href="#" style="--clr: #b0e0e6">
+            <span class="icon">
+              <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li id="profilemobile" class="list">
+          <a href="#" style="--clr: #98fb98">
+            <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+            <span class="text">About</span>
+          </a>
+        </li>
+        <li id="projectmobile" class="list">
+          <a href="#" style="--clr: #dda0dd">
+            <span class="icon"><ion-icon name="laptop-outline"></ion-icon></span>
+            <span class="text">Project</span>
+          </a>
+        </li>
+        <li id="servicemobile" class="list">
+          <a href="#" style="--clr: #faf0e6">
+            <span class="icon"><ion-icon name="cafe-outline"></ion-icon></span>
+            <span class="text">Services</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="#" style="--clr: #ffdead">
+            <span class="icon"><ion-icon name="book-outline"></ion-icon></span>
+            <span class="text">E-book</span>
+          </a>
+        </li>
+        <li id="contactmobile" class="list">
+          <a href="#" style="--clr: #ffefd5">
+            <span class="icon"><ion-icon name="id-card-outline"></ion-icon></span>
+            <span class="text">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- END NAVIGASI MOBILE -->
+
+    <!-- END SCRIPT MENU NAVIGASI -->
+    <div id="main-container"></div>
+
+    <script>
+      // SCRIPT NAVIGASI UNTUK MENU WEB
+      $(document).ready(function () {
+        $("#main-container").load("./pages/landing-page/index.html");
+        $("#profile").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/profile/profile.html");
+          $("#home").removeClass("active");
+          $("#project").removeClass("active");
+          $("#contact").removeClass("active");
+          $(this).addClass("active");
+        });
+        $("#home").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/landing-page/index.html");
+          $("#profile").removeClass("active");
+          $("#project").removeClass("active");
+          $("#contact").removeClass("active");
+          $(this).addClass("active");
+        });
+        $("#project").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/project/project.html");
+          $("#profile").removeClass("active");
+          $("#home").removeClass("active");
+          $("#contact").removeClass("active");
+          $(this).addClass("active");
+        });
+        $("#project").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/project/project.html");
+          $("#profile").removeClass("active");
+          $("#home").removeClass("active");
+          $("#contact").removeClass("active");
+          $(this).addClass("active");
+        });
+        $("#contact").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/contact/contact.html");
+          $("#profile").removeClass("active");
+          $("#home").removeClass("active");
+          $("#project").removeClass("active");
+          $(this).addClass("active");
+        });
+
+        // SCRIPT NAVIGASI UNTUK MENU MOBILE
+        $("#homemobile").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/landing-page/index.html");
+          $("#profilemobile").removeClass("activelist");
+          $("#projectmobile").removeClass("activelist");
+          $("#servicemobile").removeClass("activelist");
+          $("#contactmobile").removeClass("activelist");
+          $(this).addClass("activelist");
+        });
+        $("#profilemobile").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/profile/profile.html");
+          $("#homemobile").removeClass("activelist");
+          $("#projectmobile").removeClass("activelist");
+          $("#servicemobile").removeClass("activelist");
+          $("#contactmobile").removeClass("activelist");
+          $(this).addClass("activelist");
+        });
+        $("#projectmobile").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/project/project.html");
+          $("#homemobile").removeClass("activelist");
+          $("#profilemobile").removeClass("activelist");
+          $("#servicemobile").removeClass("activelist");
+          $("#contactmobile").removeClass("activelist");
+          $(this).addClass("activelist");
+        });
+        $("#servicemobile").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/profile/profile.html");
+          $("#homemobile").removeClass("activelist");
+          $("#profilemobile").removeClass("activelist");
+          $("#projectmobile").removeClass("activelist");
+          $("#contactmobile").removeClass("activelist");
+          $(this).addClass("activelist");
+        });
+        $("#contactmobile").click(function (e) {
+          e.preventDefault();
+          $("#main-container").load("./pages/contact/contact.html");
+          $("#homemobile").removeClass("activelist");
+          $("#profilemobile").removeClass("activelist");
+          $("#projectmobile").removeClass("activelist");
+          $("#servicemobile").removeClass("activelist");
+          $(this).addClass("activelist");
+        });
+      });
+    </script>
+
+    <!-- CDN IONICONS -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- JS CUSTOM -->
+    <script type="text/javascript" src="./component/assets/js/script.js"></script>
+  </body>
+</html>
