@@ -19,19 +19,19 @@
   <div>
     <div id="sosmed">
       <div id="s-mobile">
-        <div class="icon-s animate__animated animate__bounceInLeft">
-          <img src="/component/assets/icon/instagram.svg" alt="" />
+        <div class="icon-s animate__animated animate__bounceInLeft" id="instagram">
+          <img src="/component/assets/icon/instagram.svg" alt=""/>
         </div>
-        <div class="icon-s animate__animated animate__bounceInLeft">
+        <div class="icon-s animate__animated animate__bounceInLeft" id="linkedin">
           <img src="/component/assets/icon/linkedin.svg" alt="" />
         </div>
-        <div class="icon-s animate__animated animate__bounceInUp">
+        <div class="icon-s animate__animated animate__bounceInUp" id="gitlab">
           <img src="/component/assets/icon/gitlab.svg" alt="" />
         </div>
-        <div class="icon-s animate__animated animate__bounceInRight">
+        <div class="icon-s animate__animated animate__bounceInRight" id="whatsapp">
           <img src="/component/assets/icon/whatsapp.svg" alt="" />
         </div>
-        <div class="icon-s animate__animated animate__bounceInRight">
+        <div class="icon-s animate__animated animate__bounceInRight" id="email">
           <img src="/component/assets/icon/envelope-regular.svg" alt="" />
         </div>
       </div>
@@ -52,4 +52,25 @@
   $(document).ready(function () {
     typeWriter();
   });
+
+  const ig = document.getElementById('instagram');
+  const linkedin = document.getElementById('linkedin');
+  const gitlab = document.getElementById('gitlab');
+  const whatsapp = document.getElementById('whatsapp');
+  const email = document.getElementById('email');
+  ig.addEventListener('click',function(){
+    window.location.href="https://instagram.com/giri_g.nastiar2";
+  })
+  linkedin.addEventListener('click',function(){
+    window.location.href="https://www.linkedin.com/in/girdevelop";
+  })
+  gitlab.addEventListener('click',function(){
+    window.location.href="https://gitlab.com/Girigim";
+  })
+  whatsapp.addEventListener('click',function(){
+    window.location.href="https://wa.me/6283149196896";
+  })
+  email.addEventListener('click',function(){
+    window.location.href="#";
+  })
 </script>
