@@ -213,7 +213,7 @@
       imgDetail = document.querySelector(".img-detail");
       titleDetail = document.querySelector("#detail-title");
       let img = crouselInner.childNodes[3].getElementsByTagName("img")[0].src.split("/");
-      img = img[3];
+      img = img[4];
       title = varclass.getElementsByTagName("span")[0].textContent;
       imgDetail.setAttribute("src", `/component/assets/images/${img}`);
       titleDetail.textContent = title.toUpperCase();
