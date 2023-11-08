@@ -215,7 +215,7 @@
       let img = crouselInner.childNodes[3].getElementsByTagName("img")[0].src.split("/");
       console.log('test');
       console.log(img);
-      img = img[4];
+      img = img[6];
       title = varclass.getElementsByTagName("span")[0].textContent;
       imgDetail.setAttribute("src", `/component/assets/images/${img}`);
       titleDetail.textContent = title.toUpperCase();
